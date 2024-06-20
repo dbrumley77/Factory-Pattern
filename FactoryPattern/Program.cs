@@ -4,7 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            Console.WriteLine("How many whells do you need for your vehicle");
+            string userInput = Console.ReadLine();
+            int parsedValue = int.Parse (userInput);
+            IVehicle myVehicle = VehicleFactory.GetVehicle(parsedValue);
+
+
+            myVehicle.Drive();
+
+
         }
+
+
+
     }
+
+
+
 }
